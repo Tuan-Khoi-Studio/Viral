@@ -1,0 +1,67 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #b2ebf2);
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff80ab;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+#yes {
+  background-color: #a5d6a7;
+  color: white;
+}
+
+#no {
+  background-color: #ffcc80;
+  color: white;
+  position: absolute; /* Đảm bảo nút "No" có vị trí tuyệt đối */
+  transition: left 0.2s ease, top 0.2s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("path/to/your/image.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
